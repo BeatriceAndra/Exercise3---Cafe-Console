@@ -1,2 +1,11 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿using Cafe.ConsoleUI.Menus;
+using Cafe.Infrastructure.Factories;
+
+class Program
+{
+    static void Main()
+    {
+        var mainMenu = new MainMenu(new BeverageFactory());
+        mainMenu.Start();
+    }
+}
