@@ -1,4 +1,5 @@
-﻿using Cafe.Domain.Beverages;
+﻿using Cafe.ConsoleUI.Enums;
+using Cafe.Domain.Beverages;
 using Cafe.Domain.Factories;
 
 namespace Cafe.ConsoleUI.Menus
@@ -16,24 +17,27 @@ namespace Cafe.ConsoleUI.Menus
         {
             while (true)
             {
-                Console.WriteLine("Choose base: 1) Espresso 2) Tea 3) Hot Chocolate 0) Exit");
-                var choice = Console.ReadLine();
+                Console.WriteLine("Choose base: 1) Espresso 2) Tea 3) Hot Chocolate 0) Exit ");
 
-                if (choice == "0") return null;
-
-                string key = choice switch
-                {
-                    "1" => "espresso",
-                    "2" => "tea",
-                    "3" => "hotchocolate",
-                    _ => null
-                };
-
-                if (key == null)
+                if (!int.TryParse(Console.ReadLine(), out int input) ||
+                    !Enum.IsDefined(typeof(BeverageChoice), input))
                 {
                     Console.WriteLine("Invalid choice, try again.");
                     continue;
                 }
+
+                var choice = (BeverageChoice)input;
+
+                if (choice == BeverageChoice.Exit)
+                    return null;
+
+                var key = choice switch
+                {
+                    BeverageChoice.Espresso => "espresso",
+                    BeverageChoice.Tea => "tea",
+                    BeverageChoice.HotChocolate => "hotchocolate",
+                    _ => null
+                };
 
                 return beverageFactory.Create(key);
             }
