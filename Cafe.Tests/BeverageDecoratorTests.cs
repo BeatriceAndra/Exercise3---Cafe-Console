@@ -7,7 +7,7 @@ public class BeverageDecoratorTests
     public void Espresso_WithMilkAndExtraShot_CalculatesCorrectCostAndDescription()
     {
         // Given
-        IBeverage beverage = new Espresso();
+        var beverage = new Espresso();
 
         // When
         beverage = new MilkDecorator(beverage);

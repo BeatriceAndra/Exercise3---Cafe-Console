@@ -16,3 +16,4 @@ namespace Cafe.Infrastructure.Observers
         }
     }
 }
+

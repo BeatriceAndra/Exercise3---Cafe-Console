@@ -11,8 +11,10 @@ namespace Cafe.Application.Services
 
         public OrderService(IPricingStrategy pricingStrategy, IOrderEventPublisher eventPublisher)
         {
-            this.pricingStrategy = pricingStrategy ?? throw new ArgumentNullException(nameof(pricingStrategy));
-            this.eventPublisher = eventPublisher ?? throw new ArgumentNullException(nameof(eventPublisher));
+            ValidateArguments(pricingStrategy, eventPublisher);
+
+            this.pricingStrategy = pricingStrategy;
+            this.eventPublisher = eventPublisher;
         }
 
         public void PlaceOrder(IBeverage beverage)
@@ -33,5 +35,15 @@ namespace Cafe.Application.Services
 
             eventPublisher.Publish(orderEvent);
         }
+
+        private static void ValidateArguments(IPricingStrategy pricingStrategy, IOrderEventPublisher eventPublisher)
+        {
+            if (pricingStrategy == null)
+                throw new ArgumentNullException(nameof(pricingStrategy));
+            if (eventPublisher == null)
+                throw new ArgumentNullException(nameof(eventPublisher));
+        }
+
     }
 }
+

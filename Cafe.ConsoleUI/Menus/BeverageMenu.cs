@@ -44,3 +44,4 @@ namespace Cafe.ConsoleUI.Menus
         }
     }
 }
+

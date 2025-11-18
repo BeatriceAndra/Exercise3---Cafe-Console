@@ -7,3 +7,4 @@ namespace Cafe.Domain.Factories
         IBeverage Create(string key);
     }
 }
+
