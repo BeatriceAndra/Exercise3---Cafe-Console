@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.14.36623.8 d17.14
+VisualStudioVersion = 17.14.36623.8
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cafe.ConsoleUI", "Cafe.ConsoleUI\Cafe.ConsoleUI.csproj", "{1423B39C-250B-4B7A-850D-FC502933F185}"
 EndProject
@@ -10,6 +10,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cafe.Domain", "Cafe.Domain\Cafe.Domain.csproj", "{46C1FDED-4F15-44DE-B973-6A8E4C8100CA}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cafe.Infrastructure", "Cafe.Infrastructure\Cafe.Infrastructure.csproj", "{31392643-E4C7-4C78-B8C0-2AFF5B92DB79}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cafe.Tests", "Cafe.Tests\Cafe.Tests.csproj", "{C40E56DF-F24E-40E1-960E-AB24F8B99707}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{31392643-E4C7-4C78-B8C0-2AFF5B92DB79}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{31392643-E4C7-4C78-B8C0-2AFF5B92DB79}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{31392643-E4C7-4C78-B8C0-2AFF5B92DB79}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C40E56DF-F24E-40E1-960E-AB24F8B99707}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C40E56DF-F24E-40E1-960E-AB24F8B99707}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C40E56DF-F24E-40E1-960E-AB24F8B99707}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C40E56DF-F24E-40E1-960E-AB24F8B99707}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

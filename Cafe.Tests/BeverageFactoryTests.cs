@@ -1,7 +1,8 @@
-﻿using System;
+﻿using Cafe.Domain.Beverages;
 using Cafe.Domain.Factories;
 using Cafe.Infrastructure.Factories;
-using Cafe.Domain.Beverages;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System;
 using Xunit;
 
 public class BeverageFactoryTests
@@ -16,6 +17,7 @@ public class BeverageFactoryTests
     {
         var beverage = factory.Create(key);
         Assert.IsType(expectedType, beverage);
+        Assert.Equal(key.ToLower(), beverage.Describe().ToLower());
     }
 
     [Fact]

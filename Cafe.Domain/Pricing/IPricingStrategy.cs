@@ -5,3 +5,4 @@
         decimal Apply(decimal subtotal);
     }
 }
+
